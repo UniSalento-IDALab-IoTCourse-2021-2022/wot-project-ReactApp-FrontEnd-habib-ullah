@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Smart T-Shirt for Monitoring Thermal Comfort and  Physiological Parameters in Working Places
+Wearable devices represent a versatile technology in the IoT, enabling non-invasive and accurate data collection directly from the human body.The development of a smart shirt to monitor working conditions in particularly dangerous workplaces. The wearable device integrates a wide set of sensors to locally acquire the user’s  signs (e.g., heart rate, and temperature).The acquired data are wirelessly sent to a cloud platform, where they are displayed, processed, and stored. A mobile application was deployed to gather data from the wearable devices and forward them toward the cloud application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# System Architecture
+The developed wearable device represents the source nodes of a monitoring system based on a cloud platform, which displays, processes, and stores the gathered data. The developed system enables remote monitoring of workers’ parameters and sends alarm notifications to users and companies’ security managers if abnormal parameters are detected. Furthermore, a mobile application was developed to gather data from wearable devices and forward the acquired data to the cloud platform through Message Queue Telemetry Transmission (MQTT), acting as a mobile IoT gateway.
 
-## Available Scripts
+![Algorithm schema](public/images/systemArchitect.webp)
 
-In the project directory, you can run:
+# Setup
+To run this project, install it locally using npm:
+```
+$ npm install
+$ npm run start
+```
+To run the node server for login:
 
-### `npm start`
+```
+$ node server.js
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Enter credentials:
+```
+user name: test
+password: test1
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Mobile Application
 
-### `npm test`
+Download the application from playstore "Simplelink SensorTag"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Algorithm schema](public/images/androidApp.png)
 
-### `npm run build`
+After install the application run it and connect with Ti SensorTag CC2650.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: If app is not run or crash. Do the steps below
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Go to settings
+2. Tap the USB debugging mode
+3. Restart the app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

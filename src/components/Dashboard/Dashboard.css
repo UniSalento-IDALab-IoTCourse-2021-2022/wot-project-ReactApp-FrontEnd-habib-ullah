@@ -1,0 +1,19 @@
+.dash-heading{
+    border-bottom: 1px solid #d4d7da;
+    font-size: 23px;
+    text-transform: capitalize;
+    line-height: 2.5;
+    color: #212529;
+    margin: 20px auto !important;
+}
+.custom-navbar{
+    background-color: darkgray !important;
+}
+.dataShowContainer{
+    margin: 10px auto !important;
+    text-align: right;
+}
+
+.charts-table-data{
+    text-align: center;
+}

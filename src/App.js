@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+// useState
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Dashboard } from "./components/Dashboard/Dashboard";
+import { Preferences } from "./components/Preferences/Preferences";
+import { Login } from "./components/Login/Login";
 
 function App() {
+  const [token, setToken] = useState();
+  const tokenL = localStorage.getItem("token");
+  const initialValue = JSON.parse(tokenL);
+  if (!initialValue) {
+    return <Login setToken={setToken} />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/preferences" element={<Preferences />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
-
 export default App;
